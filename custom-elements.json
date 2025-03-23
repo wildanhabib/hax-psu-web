@@ -1,0 +1,224 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "hax-psu-web.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`hax-psu-web`",
+          "name": "HaxPsuWeb",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true,
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "haxProperties",
+              "static": true,
+              "description": "haxProperties integration via file reference",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "title",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "t",
+              "type": {
+                "text": "object"
+              },
+              "default": "{ ...this.t, title: \"Title\", }"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "title"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "DDDSuper",
+              "package": "@haxtheweb/d-d-d/d-d-d.js"
+            },
+            {
+              "name": "I18NMixin",
+              "package": "@haxtheweb/i18n-manager/lib/I18NMixin.js"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "hax-psu-web",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "HaxPsuWeb",
+          "declaration": {
+            "name": "HaxPsuWeb",
+            "module": "hax-psu-web.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "HaxPsuWeb",
+            "module": "hax-psu-web.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/hax-psu.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "HaxPsu",
+          "members": [
+            {
+              "kind": "method",
+              "name": "renderExamplesTemplate"
+            },
+            {
+              "kind": "field",
+              "name": "title",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "'HAX @ PSU'",
+              "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "examples",
+              "privacy": "public",
+              "type": {
+                "text": "array"
+              },
+              "default": "[ { title: 'Customer Discovery 101', type: \"Invent Penn State\", description: 'Launchbox', url: 'https://customerdiscovery101.launchbox.psu.edu/', image: 'https://customerdiscovery101.launchbox.psu.edu/', }, { title: 'Eberly OER Courses', type: \"Eberly College of Science\", description: 'Office of Digital Learning', url: 'https://oer.courses.science.psu.edu/', image: 'https://oer.courses.science.psu.edu/', }, { title: 'AA 100', type: \"College of Arts and Architecture\", description: 'Introduction to International Arts course', url: 'https://courses.hax.psu.edu/bto108/sites/aa100-su23/', image: 'https://oer.hax.psu.edu/bto108/sites/aa100-su23/' }, { title: 'The Sea Voyage', type: \"University Libraries\", description: 'Digital Beaumont & Fletcher', url: 'https://tsv-dbfp.libraries.psu.edu', image: 'https://tsv-dbfp.libraries.psu.edu/content/basetext/basetext-act-02/' }, { title: 'PHYS 211', type: \"Eberly College of Science\", description: 'Mechanics course', url: 'https://oer.hax.psu.edu/lul29/sites/phys211/', image: 'https://oer.hax.psu.edu/lul29/sites/phys211/week-3a-kinematics-of-projectile-motion-and-uniform-circular-motion/uniform-circular-motion' }, { title: 'HAX Docs', type: \"HAXcellence\", description: 'Teaching with HAX', url: 'https://haxtheweb.org/', image: 'https://haxtheweb.org/ontology' }, { title: 'IST 256', type: \"Information Sciences & Technology\", description: 'Programming for the web Course', url: 'https://oer.hax.psu.edu/bto108/sites/ist256/', image: 'https://oer.hax.psu.edu/bto108/sites/ist256/' }, ]",
+              "attribute": "examples"
+            },
+            {
+              "kind": "field",
+              "name": "stats",
+              "privacy": "public",
+              "type": {
+                "text": "object"
+              },
+              "default": "{}",
+              "attribute": "stats"
+            },
+            {
+              "kind": "field",
+              "name": "year",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "attribute": "year"
+            },
+            {
+              "kind": "field",
+              "name": "image",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "image"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "'HAX @ PSU'",
+              "fieldName": "title"
+            },
+            {
+              "name": "stats",
+              "type": {
+                "text": "object"
+              },
+              "default": "{}",
+              "fieldName": "stats"
+            },
+            {
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "image"
+            },
+            {
+              "name": "year",
+              "type": {
+                "text": "number"
+              },
+              "fieldName": "year"
+            },
+            {
+              "name": "examples",
+              "type": {
+                "text": "array"
+              },
+              "default": "[ { title: 'Customer Discovery 101', type: \"Invent Penn State\", description: 'Launchbox', url: 'https://customerdiscovery101.launchbox.psu.edu/', image: 'https://customerdiscovery101.launchbox.psu.edu/', }, { title: 'Eberly OER Courses', type: \"Eberly College of Science\", description: 'Office of Digital Learning', url: 'https://oer.courses.science.psu.edu/', image: 'https://oer.courses.science.psu.edu/', }, { title: 'AA 100', type: \"College of Arts and Architecture\", description: 'Introduction to International Arts course', url: 'https://courses.hax.psu.edu/bto108/sites/aa100-su23/', image: 'https://oer.hax.psu.edu/bto108/sites/aa100-su23/' }, { title: 'The Sea Voyage', type: \"University Libraries\", description: 'Digital Beaumont & Fletcher', url: 'https://tsv-dbfp.libraries.psu.edu', image: 'https://tsv-dbfp.libraries.psu.edu/content/basetext/basetext-act-02/' }, { title: 'PHYS 211', type: \"Eberly College of Science\", description: 'Mechanics course', url: 'https://oer.hax.psu.edu/lul29/sites/phys211/', image: 'https://oer.hax.psu.edu/lul29/sites/phys211/week-3a-kinematics-of-projectile-motion-and-uniform-circular-motion/uniform-circular-motion' }, { title: 'HAX Docs', type: \"HAXcellence\", description: 'Teaching with HAX', url: 'https://haxtheweb.org/', image: 'https://haxtheweb.org/ontology' }, { title: 'IST 256', type: \"Information Sciences & Technology\", description: 'Programming for the web Course', url: 'https://oer.hax.psu.edu/bto108/sites/ist256/', image: 'https://oer.hax.psu.edu/bto108/sites/ist256/' }, ]",
+              "fieldName": "examples"
+            }
+          ],
+          "superclass": {
+            "name": "DDD",
+            "package": "@haxtheweb/d-d-d/d-d-d.js"
+          },
+          "tagName": "hax-psu",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "HaxPsu",
+          "declaration": {
+            "name": "HaxPsu",
+            "module": "src/hax-psu.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "hax-psu",
+          "declaration": {
+            "name": "HaxPsu",
+            "module": "src/hax-psu.js"
+          }
+        }
+      ]
+    }
+  ]
+}
